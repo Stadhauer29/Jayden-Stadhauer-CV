@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html lang="en">
 <head>
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Jayden's Portfolio</title>
     <style>
 /* ======= BEGIN styles.css ======= */
+        /* =================================================================== 
  * Luther Main Stylesheet
  * Template Ver. 1.0.0
  * 02-15-2021
@@ -419,6 +420,7 @@ button,
 [type="reset"],
 [type="submit"] {
     -webkit-appearance : button;
+    appearance         : button;
 }
 
 button::-moz-focus-inner,
@@ -469,8 +471,10 @@ textarea {
 }
 
 [type="search"] {
-    -webkit-appearance : textfield;
-    outline-offset     : -2px;
+    appearance          : textfield;
+    -webkit-appearance  : textfield;
+    -moz-appearance     : textfield;
+    outline-offset      : -2px;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -4246,7 +4250,7 @@ img.u-pull-left {
 }
  /* ======= END styles.css ======= */
  /* ======= BEGIN vendor.css ======= */
- /* ===================================================================
+   /* ===================================================================
  * Theme Third-party Stylesheets
  * Template Ver. 1.0.0
  * 02-16-2021
@@ -4627,11 +4631,9 @@ pre[class*="language-"] {
     display : none;
 }
 
-:root {
-    /*
-    --swiper-pagination-color: var(--swiper-theme-color);
-    */
-}
+/*
+--swiper-pagination-color: var(--swiper-theme-color);
+*/
 
 .swiper-pagination {
     position   : absolute;
@@ -4814,6 +4816,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius    : 10px;
     position         : relative;
+    touch-action     : none;
     -ms-touch-action : none;
     background       : rgba(0, 0, 0, 0.1);
 }
@@ -4877,11 +4880,7 @@ button.swiper-pagination-bullet {
 
 /* Preloader */
 
-:root {
-    /*
-    --swiper-preloader-color: var(--swiper-theme-color);
-    */
-}
+/* Removed empty :root rule that only contained commented variables */
 
 .swiper-lazy-preloader {
     width            : 42px;
@@ -5118,11 +5117,10 @@ button.swiper-pagination-bullet {
     transform : scale(1);
     opacity   : 1;
 }
-  /* ======= END vendor.css ======= */
- </style>
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
+   /* ======= END vendor.css ======= */
+   </style>
+</head>
+<meta charset="utf-8">
     <title>Jayden</title>
     <meta name="description" content="">
     <meta name="author" content="">
@@ -5131,11 +5129,16 @@ button.swiper-pagination-bullet {
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="6cfb8d59889433.5a32c074ee8c7.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="6cfb8d59889433.5a32c074ee8c7.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="c:\Users\jayde\Downloads\6cfb8d59889433.5a32c074ee8c7.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="c:\Users\jayde\Downloads\6cfb8d59889433.5a32c074ee8c7.jpg">
     <link rel="manifest" href="site.webmanifest">
 
 </head>
@@ -5233,8 +5236,8 @@ button.swiper-pagination-bullet {
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="IMG_7325.PNG" 
-                             srcset="IMG_7325.PNG" alt="" class="about-info__pic" data-animate-el>
+                        <img src="c:\Users\jayde\Downloads\IMG_7325.PNG" 
+                             srcset="c:\Users\jayde\Downloads\IMG_7325.PNG" alt="" class="about-info__pic" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -5250,7 +5253,7 @@ button.swiper-pagination-bullet {
  teams to achieve strategic goals. I am eager to contribute my creativity and fresh perspectives to marketing initiatives
  while gaining valuable industry experience and driving measurable results.
                             </p>
-                            <a href="Jayden Stadhauer CV.pdf" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                            <a href="c:\Users\jayde\Downloads\Jayden Stadhauer CV.pdf" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
 
                         </div>
                     </div>
@@ -5379,8 +5382,8 @@ Led financial components of assignments, including performing Time Value of Mone
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
-                                        <img src="Screenshot 2025-10-18 211725.png"
-                                             srcset="Screenshot 2025-10-18 211725.png"  alt="">
+                                        <img src="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-10-18 211725.png"
+                                             srcset="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-10-18 211725.png"  alt="">
                                     </div>
                                     
                                     <div class="folio-list__item-text">
@@ -5400,8 +5403,8 @@ Led financial components of assignments, including performing Time Value of Mone
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
-                                        <img src="Screenshot 2025-04-02 101149.png" 
-                                             srcset="Screenshot 2025-04-02 101149.png" alt="">
+                                        <img src="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-04-02 101149.png" 
+                                             srcset="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-04-02 101149.png" alt="">
                                     </div>
                                     
                                     <div class="folio-list__item-text">
@@ -5421,8 +5424,8 @@ Led financial components of assignments, including performing Time Value of Mone
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="Your paragraph text (1).png" 
-                                             srcset="Your paragraph text (1).png" alt="">
+                                        <img src="c:\Users\jayde\Downloads\Your paragraph text (1).png" 
+                                             srcset="c:\Users\jayde\Downloads\Your paragraph text (1).png" alt="">
                                     </div>
                                     
                                     <div class="folio-list__item-text">
@@ -5448,7 +5451,7 @@ Led financial components of assignments, including performing Time Value of Mone
                     -------------------------------------------- -->
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
-                            <img src="Screenshot 2025-10-18 211725.png" alt="">
+                            <img src="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-10-18 211725.png" alt="">
                 
                             <div class="modal-popup__desc">
                                 <h5>Event plan for a Formal Dine</h5>
@@ -5461,13 +5464,13 @@ Led financial components of assignments, including performing Time Value of Mone
                                 </ul>
                             </div>
 
-                            <a href="Corazon De Mexico.pptx" class="modal-popup__details">Download Powerpoint</a>
+                            <a href="c:\Users\jayde\Documents\Portfolio\Corazon De Mexico.pptx" class="modal-popup__details">Download Powerpoint</a>
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
-                            <img src="Screenshot 2025-04-02 101149.png" alt="">
+                            <img src="c:\Users\jayde\Pictures\Screenshots\Screenshot 2025-04-02 101149.png" alt="">
                 
                             <div class="modal-popup__desc">
                                 <h5>Corn O'clock</h5>
@@ -5482,13 +5485,13 @@ Led financial components of assignments, including performing Time Value of Mone
                                 </ul>
                             </div>
                 
-                            <a href="Question 2 Video Advertisment.mp4" class="modal-popup__details">Project link</a>
+                            <a href="c:\Users\jayde\Documents\Portfolio\Question 2 Video Advertisment.mp4" class="modal-popup__details">Project link</a>
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-03" hidden>
                         <div class="modal-popup">
-                            <img src="Your paragraph text (1).png" alt="">
+                            <img src="c:\Users\jayde\Downloads\Your paragraph text (1).png" alt="">
                 
                             <div class="modal-popup__desc">
                                 <h5>Car Detailing</h5>
@@ -5505,7 +5508,7 @@ Led financial components of assignments, including performing Time Value of Mone
                                 </ul>
                             </div>
                 
-                            <a href="" class="modal-popup__details">Instagram</a>
+                            <a href="https://www.instagram.com/on.site.shine.detailing/" class="modal-popup__details">Instagram</a>
                         </div>
                     </div> <!-- end modal -->
 
