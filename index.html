@@ -509,6 +509,61 @@ template {
  *
  *
  * ------------------------------------------------------------------- */
+.about-container {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-info__pic {
+    width: 45%;                    /* Make image smaller */
+    max-width: 400px;             /* Cap the maximum size */
+    height: auto;                 /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;           /* Optional: rounded corners */
+    z-index: 1;                   /* Lower layer */
+    position: relative;
+}
+
+.about-info__text {
+    position: absolute;           /* Position over the image */
+    right: 0;                     /* Align to right side */
+    top: 50%;                     /* Center vertically */
+    transform: translateY(-50%);   /* Perfect vertical centering */
+    width: 60%;                   /* Text area width */
+    padding: var(--vspace-2);     /* Add padding */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 8px;           /* Match image radius */
+    z-index: 2;                   /* Higher layer - sits on top */
+    margin-left: 0;               /* Remove negative margin */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .about-info__pic {
+        width: 80%;
+        max-width: 300px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .about-info__text {
+        position: relative;        /* Stack normally on mobile */
+        width: 100%;
+        transform: none;
+        top: auto;
+        right: auto;
+        margin-top: var(--vspace-1);
+        background: transparent;   /* Remove background on mobile */
+    }
+}
 
 html {
     font-size  : var(--base-size);
