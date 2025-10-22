@@ -4306,6 +4306,13 @@ img.u-pull-left {
 /* force-show while debugging */
 [data-animate-el] { opacity: 1 !important; }
 .s-pagewrap { visibility: visible !important; }
+/* Remove black background on About text box */
+.about-info__text {
+  background: transparent;   /* no panel */
+  box-shadow: none;          /* in case any shadow was added */
+  border-radius: 0;          /* optional: remove rounding */
+}
+
  /* ======= END styles.css ======= */
  /* ======= BEGIN vendor.css ======= */
    /* ===================================================================
