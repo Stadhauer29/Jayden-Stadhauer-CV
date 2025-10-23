@@ -4312,6 +4312,36 @@ img.u-pull-left {
   box-shadow: none;          /* in case any shadow was added */
   border-radius: 0;          /* optional: remove rounding */
 }
+/* Modal overlay container */
+[id^="modal-"] {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.75);
+  padding: 2rem;
+  z-index: 1000;
+}
+/* Keep modals fully hidden when 'hidden' is present */
+[id^="modal-"][hidden] { display: none !important; }
+/* Size the modal card */
+.modal-popup {
+  width: min(680px, 92vw);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 8px;
+}
+/* Optional close button styling */
+.modal-close {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  background: transparent;
+  border: 0;
+  color: #000;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
 
  /* ======= END styles.css ======= */
  /* ======= BEGIN vendor.css ======= */
@@ -5533,6 +5563,13 @@ Led financial components of assignments, including performing Time Value of Mone
 
                             <a href="Corazon De Mexico.pptx" class="modal-popup__details">Download Powerpoint</a>
                         </div>
+                        <div id="modal-01" hidden>
+  <div class="modal-popup">
+    <!-- existing content -->
+    <button type="button" class="modal-close" aria-label="Close">×</button>
+  </div>
+</div>
+
                     </div> <!-- end modal -->
 
                     <div id="modal-02" hidden>
@@ -5554,6 +5591,13 @@ Led financial components of assignments, including performing Time Value of Mone
                 
                             <a href="Question 2 Video Advertisment.mp4" class="modal-popup__details">Project link</a>
                         </div>
+                        <div id="modal-01" hidden>
+  <div class="modal-popup">
+    <!-- existing content -->
+    <button type="button" class="modal-close" aria-label="Close">×</button>
+  </div>
+</div>
+
                     </div> <!-- end modal -->
 
                     <div id="modal-03" hidden>
@@ -5577,6 +5621,13 @@ Led financial components of assignments, including performing Time Value of Mone
                 
                             <a href="https://www.instagram.com/on.site.shine.detailing/" class="modal-popup__details">Instagram</a>
                         </div>
+                        <div id="modal-01" hidden>
+  <div class="modal-popup">
+    <!-- existing content -->
+    <button type="button" class="modal-close" aria-label="Close">×</button>
+  </div>
+</div>
+
                     </div> <!-- end modal -->
 
                 </div> <!-- end works-portfolio -->
@@ -5701,6 +5752,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       modals.forEach(m => { if (!m.hasAttribute('hidden')) closeModal(m); });
     }
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const triggers = document.querySelectorAll('.folio-list__item-link[href^="#modal-"]');
+  const modals   = document.querySelectorAll('[id^="modal-"]');
+
+  const openModal = (m) => { m.removeAttribute('hidden'); document.body.style.overflow = 'hidden'; };
+  const closeModal = (m) => { m.setAttribute('hidden',''); document.body.style.overflow = ''; };
+
+  triggers.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();                           // stop hash jump
+      const m = document.querySelector(link.getAttribute('href'));
+      if (m) openModal(m);
+    });
+  });
+
+  modals.forEach(m => {
+    // close when clicking the dark backdrop
+    m.addEventListener('click', (e) => { if (e.target === m) closeModal(m); });
+    // close via any .modal-close inside
+    m.querySelectorAll('.modal-close').forEach(btn => btn.addEventListener('click', () => closeModal(m)));
+  });
+
+  // close any open modal on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') modals.forEach(m => { if (!m.hasAttribute('hidden')) closeModal(m); });
   });
 });
 </script>
